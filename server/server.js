@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 import React from 'react'
-import ReactDOMServer from 'react-dom/server'
+import {renderToString} from 'react-dom/server'
 import App from '../src/App'
 
 
@@ -16,9 +16,11 @@ app.use('^/$', (req, res, next) => {
             console.log('error', err)
             return res.status(500).send('some error occured')
         }
+        const htmlContents = renderToString(<App/>)
+        res.set('Cache-Control','public, max-age=600, s-maxage=1200') //hold contents to nearest edge location for 1200 sec
         return res.send(data.replace(
             '<div id="root"</div>',
-            `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>`)
+            `<div id="root">${htmlContents}</div>`)
         )
     })
 })
