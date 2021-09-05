@@ -7,7 +7,9 @@
     "webpack": "node_modules/.bin/webpack",
     "firebase-login": "node_modules/.bin/firebase login",
     "firebase-init-host": "node_modules/.bin/firebase init hosting",
-    "firebase-serve": "node_modules/.bin/firebase serve"
+    "firebase-serve": "node_modules/.bin/firebase serve",
+    "firebase-func": "node_modules/.bin/firebase init functions",
+    "babel": "node_modules/.bin/babel src -d functions/src && node_modules/.bin/babel index.js -d functions"
   },
   "author": "devendra prasad",
   "license": "MIT",
@@ -20,9 +22,9 @@
   "devDependencies": {
     "@babel/preset-env": "^7.15.4",
     "@babel/preset-react": "^7.14.5",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.2",
+    "babel-cli": "latest",
+    "babel-core": "latest",
+    "babel-loader": "latest",
     "babel-polyfill": "^6.26.0",
     "firebase-admin": "^9.11.1",
     "firebase-functions": "^3.15.5",
