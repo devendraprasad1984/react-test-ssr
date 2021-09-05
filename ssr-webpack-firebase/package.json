@@ -4,7 +4,9 @@
   "description": "test ssr app in react using firebase hosting",
   "main": "src/index.js",
   "scripts": {
-    "webpack": "node_modules/.bin/webpack"
+    "webpack": "node_modules/.bin/webpack",
+    "firebase-login": "node_modules/.bin/firebase login",
+    "firebase-init-host": "node_modules/.bin/firebase init hosting"
   },
   "author": "devendra prasad",
   "license": "MIT",
