@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "dpresume-ssr"
-  }
+    "default": "dpresume-ssr",
+    "ssr": "dpresume-ssr"
+  },
+  "targets": {}
 }

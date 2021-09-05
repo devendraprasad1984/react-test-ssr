@@ -8,8 +8,11 @@
     "firebase-login": "node_modules/.bin/firebase login",
     "firebase-init-host": "node_modules/.bin/firebase init hosting",
     "firebase-serve": "node_modules/.bin/firebase serve",
+    "firebase-serve-only-hosting": "node_modules/.bin/firebase serve --only functions,hosting",
     "firebase-func": "node_modules/.bin/firebase init functions",
-    "babel": "node_modules/.bin/babel src -d functions/src && node_modules/.bin/babel index.js -d functions"
+    "babel": "node_modules/.bin/babel src -d functions/src && node_modules/.bin/babel index.js -d functions",
+    "firebase-use-add": "node_modules/.bin/firebase use --add",
+    "firebase-deploy": "node_modules/.bin/firebase deploy"
   },
   "author": "devendra prasad",
   "license": "MIT",
